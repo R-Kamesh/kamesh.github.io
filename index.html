@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kamesh | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;}
+
+    body{
+      font-family:"Montserrat",sans-serif;
+      background:radial-gradient(circle at 0% 0%,#182b55 0,#040716 45%,#012d32 100%);
+      color:#dfe0ff;
+    }
+
+    .page{
+      max-width:1200px;
+      margin:0 auto;
+      padding:24px;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    @keyframes fadeUp{
+      0%{opacity:0;transform:translateY(40px);}
+      100%{opacity:1;transform:translateY(0);}
+    }
+
+    /* NAVBAR */
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:10px 22px;
+      border-radius:999px;background:rgba(10,15,30,0.7);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.08);
+      margin-bottom:32px;
+    }
+
+    .nav-left{display:flex;align-items:center;gap:10px;}
+    .logo-dot{
+      width:18px;height:18px;border-radius:50%;
+      background:radial-gradient(circle at 30% 0%,#ffe08a,#f97316 40%,#a855f7 100%);
+    }
+    .nav-links{display:flex;gap:26px;}
+    .nav-links a{color:#dfe6ff;text-decoration:none;opacity:.8;position:relative;}
+    .nav-links a.active{opacity:1;}
+    .nav-links a.active::after{
+      content:"";position:absolute;bottom:-2px;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,#f97316,#ec4899,#6366f1);
+      border-radius:999px;
+    }
+
+    /* HERO SECTION */
+    .hero-home-inner{
+      width:100%;
+      padding:32px 40px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:40px;
+      border-radius:26px;
+      background:radial-gradient(circle at 0% 0%,#273457 0,#071328 40%,#032b36 100%);
+      box-shadow:0 30px 80px rgba(0,0,0,.7);
+
+      opacity:0;
+      transform:translateY(40px);
+      animation:fadeUp .9s ease forwards;
+    }
+
+    .hero-title{font-size:40px;font-weight:700;}
+
+    .gradient{
+      background:linear-gradient(90deg,#f97316,#ec4899,#6366f1);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero-subtitle{margin-top:10px;margin-bottom:14px;color:#d0d3ff;}
+    .hero-desc{line-height:1.7;color:#bcd0ff;}
+
+    .btn-primary,.btn-ghost{
+      display:inline-flex;padding:10px 22px;border-radius:999px;
+      text-decoration:none;font-size:14px;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#f97316,#ec4899,#6366f1);
+      color:white;margin-right:10px;
+    }
+    .btn-ghost{
+      border:1px solid rgba(255,255,255,.4);
+      color:white;
+    }
+
+    .hero-orbit{
+      width:260px;height:260px;border-radius:999px;
+      background:linear-gradient(90deg,#60a5fa,#22c55e,#fbbf24);
+      padding:5px;display:flex;justify-content:center;align-items:center;
+      box-shadow:0 0 80px rgba(59,130,246,.7);
+    }
+
+    .hero-photo-inner{
+      width:100%;height:100%;border-radius:inherit;
+      overflow:hidden;
+      background:radial-gradient(circle,#0b0f24,#020617);
+    }
+    .hero-photo-inner img{width:100%;height:100%;object-fit:cover;}
+
+    /* SECOND CARD */
+    .second-card{
+      width:100%;margin-top:30px;
+      background:radial-gradient(circle at 0% 0%,#273457 0,#071328 40%,#032b36 100%);
+      border-radius:26px;
+      padding:30px 40px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 30px 80px rgba(0,0,0,0.7);
+
+      opacity:0;
+      transform:translateY(40px);
+      animation:fadeUp .9s ease forwards;
+      animation-delay:.25s;
+    }
+
+    .second-card h2{
+      font-size:32px;
+      font-weight:700;
+      color:white;
+      margin-bottom:16px;
+    }
+
+    .second-card .gradient{
+      font-size:32px;
+      font-weight:700;
+    }
+
+    .second-card li{
+      list-style:none;
+      margin-bottom:10px;
+      font-size:18px;
+      color:#d0d3ff;
+    }
+    .second-card li::before{
+      content:"• ";
+      color:#f78eff;
+    }
+
+    .footer{
+      text-align:center;color:#b5beda;font-size:12px;margin-top:auto;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo-dot"></div>
+        <div class="logo-text">Kamesh · Portfolio</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero hero-home">
+      <div class="hero-home-inner">
+        <div>
+          <h1 class="hero-title">
+            Hi, I’m <span class="gradient">Kamesh</span>
+          </h1>
+          <p class="hero-subtitle">
+            B.Tech 2nd year student at IIT Kanpur, exploring frontend development.
+          </p>
+          <p class="hero-desc">
+            I’m learning C, Python, HTML and CSS and building projects to strengthen
+            my fundamentals.<br> I’m looking for internship opportunities where I can learn
+            from real-world work and contribute to a team.
+          </p>
+          <br />
+          <a class="btn-primary" href="projects.html">View my projects</a>
+          <a class="btn-ghost" href="contact.html">Contact me</a>
+        </div>
+
+        <div class="hero-orbit">
+          <div class="hero-photo-inner">
+            <img src="me.jpg" alt="Kamesh" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECOND -->
+    <section class="second-card">
+      <h2>
+        Why I’m learning <span class="gradient">development?</span>
+      </h2>
+      <ul>
+        <li>I love creating ideas into working products</li>
+        <li>Passion for technology and UI design</li>
+        <li>Building projects and improving every week</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Kamesh · Built with HTML & CSS
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

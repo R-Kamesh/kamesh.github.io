@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kamesh | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{height:100%;}
+
+    body{
+      font-family:"Montserrat",sans-serif;
+      background:radial-gradient(circle at 0% 0%,#182b55 0,#040716 45%,#012d32 100%);
+      color:#dfe0ff;
+    }
+
+    .page{
+      max-width:1200px;
+      margin:0 auto;
+      padding:24px;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    @keyframes fadeUp{
+      0%{opacity:0;transform:translateY(40px);}
+      100%{opacity:1;transform:translateY(0);}
+    }
+
+    /* NAVBAR */
+    .nav{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:10px 22px;
+      border-radius:999px;
+      background:rgba(10,15,30,0.7);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.08);
+      margin-bottom:32px;
+      color:white;
+    }
+
+    .nav-left{display:flex;align-items:center;gap:10px;}
+
+    .logo-dot{
+      width:18px;height:18px;border-radius:50%;
+      background:radial-gradient(circle at 30% 0%,#ffe08a,#f97316 40%,#a855f7 100%);
+    }
+
+    .nav-links{display:flex;gap:26px;font-size:15px;}
+
+    .nav-links a{
+      color:#dfe6ff;
+      text-decoration:none;
+      position:relative;
+      opacity:.8;
+    }
+
+    .nav-links a.active{opacity:1;}
+
+    .nav-links a.active::after{
+      content:"";
+      height:2px;width:100%;
+      background:linear-gradient(90deg,#f97316,#a855f7,#6366f1);
+      position:absolute;bottom:-2px;left:0;
+      border-radius:999px;
+    }
+
+    /* TITLE GRADIENT MATCHES ALL PAGES */
+    .gradient{
+      background:linear-gradient(90deg,#f97316,#ec4899,#6366f1);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* CONTACT CARD */
+    .card{
+      width:100%;
+      background:radial-gradient(circle at 5% 5%,#263152,#081426 45%,#032b36 100%);
+      border-radius:26px;
+      padding:40px 50px;            /* bigger for consistency */
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.06);
+      box-shadow:0 30px 80px rgba(0,0,0,0.7);
+      margin-top:30px;
+
+      opacity:0;
+      transform:translateY(40px);
+      animation:fadeUp 0.9s ease forwards;
+      animation-delay:0.1s;
+    }
+
+    .card-title{
+      font-size:36px;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+
+    .text-muted{
+      color:#b8c2e3;
+      margin-bottom:20px;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    .card a{
+      color:#8bb4ff;
+      text-decoration:none;
+    }
+
+    .card a:hover{
+      text-decoration:underline;
+    }
+
+    .contact-details p{
+      font-size:15px;
+      color:#dfe0ff;
+      line-height:1.6;
+    }
+
+    .contact-details strong{
+      font-weight:600;
+    }
+
+    .social-row{
+      display:flex;
+      gap:10px;
+      margin-top:20px;
+    }
+
+    .social-circle{
+      width:34px;height:34px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.25);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:14px;
+      text-decoration:none;
+      color:#e5e7ff;
+      background:rgba(0,0,0,0.25);
+      transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+    }
+
+    .social-circle:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 30px rgba(0,0,0,0.8);
+      background:linear-gradient(135deg,#f97316,#6366f1);
+    }
+
+    .footer{
+      color:#97a4d6;
+      text-align:center;
+      font-size:12px;
+      margin-top:auto;
+      padding-top:20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="nav">
+      <div class="nav-left">
+        <div class="logo-dot"></div>
+        <div class="logo-text">Kamesh · Portfolio</div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <h1 class="card-title gradient">Contact</h1>
+
+      <p class="text-muted">
+        I’m open to internship opportunities and beginner-friendly roles where
+        I can learn and contribute.
+      </p>
+
+      <div class="contact-details">
+        <p><strong>Email:</strong>
+          <a href="mailto:rkamesh982006@gmail.com">rkamesh982006@gmail.com</a>
+        </p>
+
+        <p style="margin-top:6px;">
+          <strong>Location:</strong> IIT Kanpur · India
+        </p>
+      </div>
+
+      <p class="text-muted" style="margin-top:20px;">
+        Feel free to reach out if you have internship roles, small projects
+        or collaboration ideas. I’m especially interested in frontend
+        development, Python projects and software development.
+      </p>
+
+      <div class="social-row">
+        <a class="social-circle" href="#">in</a>
+        <a class="social-circle" href="#">gh</a>
+        <a class="social-circle" href="mailto:rkamesh982006@gmail.com">@</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> Kamesh · Built with HTML & CSS
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
